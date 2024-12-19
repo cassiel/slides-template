@@ -14,7 +14,11 @@ const { title } = Astro.props;
 	</head>
 
 	<body>
-		<slot />
+		<main class="reveal">
+			<div class="slides">
+				<slot />
+			</div>
+		</main>
 
 		<script>
 			import Reveal from "reveal.js";
@@ -40,8 +44,7 @@ const { title } = Astro.props;
 	@import "reveal.js/dist/theme/night.css";
 	@import "../../src/styles/highlightjs-theme-vs2015.css";
 
-	main,
-	.slide-background-content {
+	main, .slide-background-content {
 		background: linear-gradient(#133055, #0c1a2a);
 	}
 </style>
