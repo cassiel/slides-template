@@ -1,8 +1,4 @@
 ---
-/**
- * See the demo branch for example usage
- */
-
 interface Props {
 	lang: string
 	lines?: string
@@ -10,11 +6,13 @@ interface Props {
 
 const { lang, lines } = Astro.props
 ---
-
 <span class="code-container">
 	<span class="code-lang" data-id={`code-lang-${lang}`}>{lang}</span>
 	<pre
-		data-id={`code-pre-${lang}`}><code data-id={`code-code-${lang}`} class={`language-${lang}`} data-line-numbers={lines}><slot /></code></pre>
+		data-id={`code-pre-${lang}`}><code
+			data-id={`code-code-${lang}`}
+			class={`language-${lang}`}
+			data-line-numbers={lines}><slot /></code></pre>
 </span>
 
 <style is:global lang="scss">
@@ -26,10 +24,10 @@ const { lang, lines } = Astro.props
 
 	.code-lang {
 		display: inline-block;
-		font-size: 0.8em;
+		font-size: 0.5em;
 		margin-left: 0.5em;
 		margin-bottom: 0.5em;
-		opacity: 0.7;
+		opacity: 0.5;
 	}
 
 	.reveal .code-wrapper {
